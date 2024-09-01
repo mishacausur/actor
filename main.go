@@ -5,5 +5,5 @@ import "fmt"
 var print = fmt.Println
 
 func main() {
-	print("Trying actions")
+	print("extra action")
 }
