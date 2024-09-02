@@ -5,15 +5,14 @@ import "fmt"
 var print = fmt.Println
 
 func main() {
-	var number int
-	print("Enter the number: ")
-	fmt.Scan(&number)
+	var l, r int
+	fmt.Scan(&l, &r)
 
-	if number > 0 {
-		print("positive")
-	} else if number == 0 {
-		print("zero")
+	if l > r {
+		print("the first is bigger")
+	} else if l == r {
+		print("equal")
 	} else {
-		print("negative")
+		print("the second is bigger")
 	}
 }
