@@ -5,21 +5,21 @@ import "fmt"
 var print = fmt.Println
 
 func main() {
-	var l int
-	_, err := fmt.Scan(&l)
+	var l, r, t int
+	_, err := fmt.Scan(&l, &r, &t)
 
-	if err != nil || l < 0 {
-		print("Некорректный ввод")
+	if err != nil {
+		print("invalid enter")
 		return
 	}
 
-	if l < 10 {
-		print("Число меньше 10")
-	} else if l < 100 {
-		print("Число меньше 100")
-	} else if l < 1000 {
-		print("Число меньше 1000")
+	if l == r && r == t {
+		print("equal")
+	} else if l == r || r == t || t == l {
+		print("two are equal")
+	} else if l != r && r != t && l != t {
+		print("different")
 	} else {
-		print("Число больше или равно 1000")
+		print("invalid enter")
 	}
 }
