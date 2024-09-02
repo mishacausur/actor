@@ -9,9 +9,11 @@ func main() {
 	print("Enter the number: ")
 	fmt.Scan(&number)
 
-	if res := number * number; res >= 50 {
-		print("min action")
+	if number > 0 {
+		print("positive")
+	} else if number == 0 {
+		print("zero")
 	} else {
-		print("extra action")
+		print("negative")
 	}
 }
