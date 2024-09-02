@@ -5,20 +5,16 @@ import "fmt"
 var print = fmt.Println
 
 func main() {
-	var number int
-	fmt.Scan(&number)
+	var l, r int
+	fmt.Scan(&l, &r)
 
-	res := number%2 == 0
-
-	if res && number > 0 {
-		print("positive and even")
-	} else if !res && number > 0 {
-		print("positive and not even")
-	} else if res && number < 0 {
-		print("negative and even")
-	} else if !res && number < 0 {
-		print("negative and not even")
+	if l == 0 || r == 0 {
+		print("one of them is zero")
+	} else if l < 0 && r < 0 {
+		print("both are negative")
+	} else if l > 0 && r > 0 {
+		print("both are positive")
 	} else {
-		print("zero")
+		print("one is positive and another on is negative")
 	}
 }
