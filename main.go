@@ -5,14 +5,20 @@ import "fmt"
 var print = fmt.Println
 
 func main() {
-	var l, r int
-	fmt.Scan(&l, &r)
+	var number int
+	fmt.Scan(&number)
 
-	if l > r {
-		print("the first is bigger")
-	} else if l == r {
-		print("equal")
+	res := number%2 == 0
+
+	if res && number > 0 {
+		print("positive and even")
+	} else if !res && number > 0 {
+		print("positive and not even")
+	} else if res && number < 0 {
+		print("negative and even")
+	} else if !res && number < 0 {
+		print("negative and not even")
 	} else {
-		print("the second is bigger")
+		print("zero")
 	}
 }
